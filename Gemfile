@@ -67,6 +67,6 @@ group :test do
 end
 
 gem 'devise'
-gem 'bootstrap-sass', '3.3.7', require: false
+gem 'bootstrap-sass', '3.4.1', require: false
 
 gem "dartsass-rails", "~> 0.5.1"
