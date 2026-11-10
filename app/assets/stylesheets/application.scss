@@ -1,0 +1,60 @@
+
+@import "bootstrap";
+
+/* Estilos generales */
+body {
+  background-color: #d6d6d6;
+  font-family: Arial, sans-serif;
+  color: #262626;
+}
+
+/* Contenedor de publicaciones */
+.posts-container {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+/* Tarjeta de cada publicación */
+.post-card {
+  background-color: #ffffff;
+  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen de la publicación */
+.post-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Descripción */
+.post-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Enlaces */
+.post-links {
+  display: flex;
+  gap: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeee;
+}
+
+.post-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0095f6;
+}
+
+.post-links a:hover {
+  text-decoration: underline;
+}
+

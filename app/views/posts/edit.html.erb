@@ -1,0 +1,32 @@
+<h1>Editar publicación</h1>
+
+<%= form_with model: @post do |f| %>
+
+  <div>
+    <%= f.label :description, "Descripción" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= f.label :image, "Seleccionar imagen" %>
+    <%= f.file_field :image %>
+  </div>
+
+  <br>
+
+  <% if @post.image.attached? %>
+    <p>Imagen actual:</p>
+    <%= image_tag url_for(@post.image) %>
+  <% end %>
+
+  <br>
+
+  <%= f.submit "Actualizar publicación" %>
+
+<% end %>
+
+<br>
+
+<%= link_to "Volver", posts_path %>

@@ -1,0 +1,39 @@
+
+<h1 class="text-center mt-4">Instagram</h1>
+
+<div class="posts-container">
+
+  <% @posts.each do |x| %>
+
+    <div class="post-card">
+
+      <% if x.image.attached? %>
+        <%= image_tag url_for(x.image), class: "post-image" %>
+      <% end %>
+
+      <p class="post-description">
+        <%= x.description %>
+      </p>
+
+      <div class="post-links">
+
+        <%= link_to "Ver", x %>
+
+        <% if x.user == current_user %>
+          <%= link_to "Editar", edit_post_path(x) %>
+
+          <%= link_to "Eliminar", x,
+              data: {
+                turbo_method: :delete,
+                turbo_confirm: "¿Estás seguro de eliminar esta publicación?"
+              } %>
+        <% end %>
+
+      </div>
+
+    </div>
+
+  <% end %>
+
+</div>
+
